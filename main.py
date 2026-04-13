@@ -20,7 +20,7 @@ X = vectorizer.fit_transform(knowledge)
 class Request(BaseModel):
     question: str
 
-@app.post("/ask")
+@app.post("ask/")
 def ask(req: Request):
     question_vec = vectorizer.transform([req.question])
 
